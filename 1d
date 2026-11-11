@@ -1,0 +1,14 @@
+Aim: To capture and analyze network packets using Wireshark.                                                                                                                   
+                                                                                        
+What is Wireshark?
+Wireshark is a network protocol analyzer.
+In simple words, it helps us see the data packets travelling through a network.
+
+Procedure :
+Open Wireshark.
+Select your active Wi-Fi or Ethernet interface.
+Click Start Capture.
+Open a website in your browser to generate network traffic.
+Observe the captured packets.
+Apply a display filter.
+Stop the capture.
