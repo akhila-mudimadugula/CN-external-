@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int n, window, i, lost;
+
+    printf("Enter number of frames: ");
+    scanf("%d", &n);
+
+    printf("Enter window size: ");
+    scanf("%d", &window);
+
+    printf("Enter lost frame number (0 for none): ");
+    scanf("%d", &lost);
+
+    for (i = 1; i <= n; i += window) {
+        int end = i + window - 1;
+
+        if (end > n)
+            end = n;
+
+        printf("\nSending frames: ");
+        for (int j = i; j <= end; j++)
+            printf("%d ", j);
+
+        printf("\n");
+
+        if (lost >= i && lost <= end) {
+            printf("Frame %d lost!\n", lost);
+            printf("Go-Back-N: Retransmitting frames: ");
+
+            for (int j = lost; j <= end; j++)
+                printf("%d ", j);
+
+            printf("\n");
+        } else {
+            printf("All frames acknowledged.\n");
+        }
+    }
+
+    return 0;
+}
